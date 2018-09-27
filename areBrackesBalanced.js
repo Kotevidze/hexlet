@@ -6,7 +6,7 @@ function areBracketsBalanced(str) {
             arrBrackets.push({openedBrackets: true, closedBrackets: false});
             arrIndex.push(arrBrackets.length - 1);
         }
-        if (str[i] == ")") {
+        else if (str[i] == ")") {
             if (arrIndex.length != 0) {
                 var index = arrIndex.pop();
                 arrBrackets[index].closedBrackets = true;
