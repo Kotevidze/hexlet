@@ -6,6 +6,14 @@ function reverseStr(str) {
     return newStr;
 }
 
-var str = "test";
-var test = reverseStr(str);
-console.log(test);
+var newStr = "";
+var i = 1;
+function reverseStr2(str) {
+    if (str.length < i) {
+        return newStr;
+    }
+    newStr += str.substr(str.length - i, 1);
+    i++;
+    reverseStr2(str);
+    return newStr;
+}
